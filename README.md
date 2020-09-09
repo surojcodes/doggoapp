@@ -23,7 +23,7 @@
 
 ## Demo
 
-![alt text](https://surojmaharjan0.github.io/projectimages/images/doggoApp.PNG)
+![alt text](https://surojmaharjan0.github.io/projectimages/images/doggoapp.PNG)
 Website is live [here](https://doggoapp.netlify.app/)
 
 - Version **1.0.0**
