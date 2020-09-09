@@ -2,7 +2,11 @@ import React, { useEffect } from 'react';
 import Spinner from './Spinner';
 import { connect } from 'react-redux';
 import { getRandomDog } from '../actions/dogActions';
-import { getBreedImages, setLoading } from '../actions/imageActions';
+import {
+	getBreedImages,
+	setLoading,
+	emptyImages,
+} from '../actions/imageActions';
 import PropTypes from 'prop-types';
 import SearchResult from './SearchResult';
 
@@ -22,9 +26,12 @@ const DogInfo = ({
 	breed_id,
 	getBreedImages,
 	setLoading,
+	emptyImages,
 }) => {
 	useEffect(() => {
+		setLoading();
 		getRandomDog();
+		emptyImages();
 		//eslint-disable-next-line
 	}, []);
 
@@ -130,4 +137,5 @@ export default connect(mapStateToProps, {
 	getRandomDog,
 	getBreedImages,
 	setLoading,
+	emptyImages,
 })(DogInfo);
